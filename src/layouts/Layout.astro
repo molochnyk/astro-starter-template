@@ -2,30 +2,76 @@
 import Header from '../components/header/Header.astro';
 import Footer from '../components/footer/Footer.astro';
 
+import '../styles/global.scss';
 
-const { title = "Astro Starter Template" } = Astro.props;
+const { title = "Astro Starter Template", description } = Astro.props;
 ---
-
 
 <!doctype html>
 
-<html lang="en">
+<html lang="en" class="en">
 	<head>
 		<meta charset="UTF-8" />
 
-		<meta name="viewport" content="width=device-width" />
-
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
-		<meta name="generator" content={Astro.generator} />
-
 		<title>{title}</title>
+
+		<meta name="description" content={description}/>
+    <meta name="keywords" content=""/>
+    <meta name="author" content=""/>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5"/>
+
+		<!--Favicon for all modern browsers -->
+		<link rel="icon" type="image/svg+xml" href="images/_favicon/favicon.svg" />
+    <link rel="icon" href="img/_favicon/favicon32.png" sizes="32x32"/>
+    <link rel="icon" href="img/_favicon/favicon192.png" sizes="192x192"/>
+
+		<!-- Apple Touch Icon -->
+		<link rel="apple-touch-icon" href="img/_favicon/favicon180.png" sizes="180x180"/>
+
+		<!-- Windows Tile -->
+		<meta name="msapplication-TileColor" content="#000" />
+    <meta name="msapplication-TileImage" content="img/_favicon/favicon270.png"/>
+
+		<!-- Open Graph (Facebook, LinkedIn, etc.) -->
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="" />
+		<meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+		<meta property="og:url" content="" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="" />
+
+		<!-- <link rel="preload" href="" as="fetch" type="application/json" crossorigin="anonymous"> -->
+
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#000"/>
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#000"/>
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#000"/>
+
+
+		
 	</head>
 	<body>
-		<Header/>
-		<main>
-			<slot />
-		</main>
-		<Footer/>
+
+		<div class="wrapper">
+			<Header/>
+			<main class="main">
+				<slot />
+			</main>
+			<Footer/>
+		</div>
+
 	</body>
 </html>
