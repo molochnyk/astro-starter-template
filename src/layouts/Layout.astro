@@ -51,6 +51,10 @@ const { title = "Astro Starter Template", description } = Astro.props;
 		<meta name="twitter:description" content={description} />
 		<meta name="twitter:image" content="" />
 
+		<link rel="preload" href="fonts/Montserrat-Light.woff2" as="image">
+		<link rel="preload" href="fonts/Montserrat-Regular.woff2" as="image">
+		<link rel="preload" href="fonts/Montserrat-Bold.woff2" as="image">
+
 		<!-- <link rel="preload" href="" as="fetch" type="application/json" crossorigin="anonymous"> -->
 
 		<!-- Chrome, Firefox OS and Opera -->
@@ -59,8 +63,6 @@ const { title = "Astro Starter Template", description } = Astro.props;
 		<meta name="msapplication-navbutton-color" content="#000"/>
 		<!-- iOS Safari -->
 		<meta name="apple-mobile-web-app-status-bar-style" content="#000"/>
-
-
 		
 	</head>
 	<body>

@@ -9,8 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.5.6",
-    "bootstrap": "^5.3.3"
+    "astro": "^5.7.5",
+    "bootstrap": "^5.3.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
@@ -18,7 +18,7 @@
     "postcss": "^8.5.3",
     "postcss-load-config": "^6.0.1",
     "postcss-normalize": "^13.0.1",
-    "postcss-preset-env": "^10.1.5",
-    "sass": "^1.86.2"
+    "postcss-preset-env": "^10.1.6",
+    "sass": "^1.87.0"
   }
 }
