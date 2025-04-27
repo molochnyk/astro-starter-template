@@ -1,0 +1,99 @@
+@use "./variables" as *;
+@use "./functions" as *;
+
+// Connect fonts locally
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Global variables css
+:root {
+  --doc-height: 100%;
+  --iti-input-padding: 0px;
+}
+
+// Text highlight color
+::selection {
+  background-color: $accent;
+  color: #fff;
+}
+
+/*
+
+  Reset style overrides
+  
+*/
+
+// Remove arrow input ( Chrome, Safari )
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// Remove arrow input( Firefox )
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid rgba(0, 0, 0, 1);
+  -webkit-text-fill-color: #000;
+  -webkit-box-shadow: 0 0 0 1000px #00000000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+  font-size: 16px;
+  // outline: none;
+
+  @media (max-width: 480px) {
+  }
+}
+
+// Custom style for skolbar
+html {
+  // For WebKit browsers (Chrome, Safari, Edge)
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #000;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #000000e5;
+  }
+
+  // For Firefox
+  scrollbar-width: thin;
+  scrollbar-color: #000 #fff;
+}

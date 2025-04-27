@@ -1,0 +1,12 @@
+.header {
+  position: relative;
+
+  background: $black;
+
+  h2 {
+    margin: 0;
+    color: $white;
+
+    font-size: pxtorem(40px);
+  }
+}
