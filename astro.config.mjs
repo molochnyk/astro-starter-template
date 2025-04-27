@@ -1,13 +1,14 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineConfig({
   output: "static",
 
-  // site: "",
-  // base: "/",
+  base: "/",
 
-  trailingSlash: "never",
+  trailingSlash: "ignore",
   compressHTML: false,
 
   vite: {
@@ -26,10 +27,11 @@ export default defineConfig({
       minify: false,
       rollupOptions: {
         output: {
-          // assetFileNames: "styles/[name].css",
-          assetFileNames: "assets/[name][extname]",
+          assetFileNames: "styles/[name][extname]",
         },
       },
     },
+
+    plugins: [tailwindcss()],
   },
 });
